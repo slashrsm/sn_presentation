@@ -13,8 +13,8 @@
   <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
   <script type="text/javascript" src="js/jmpress.js/dist/jmpress.js"></script>
   <script src="js/highcharts/js/highcharts.js"></script>
-  <script src="http://localhost:8899/socket.io/socket.io.js"></script>
-  <script src="http://localhost:8899/remote.js"></script>
+  <script src="http://192.168.1.101:8899/socket.io/socket.io.js"></script>
+  <script src="http://192.168.1.101:8899/remote.js"></script>
 </head>
 <body>
   
@@ -91,7 +91,7 @@
       <div class="step nested" data-scale="0.05" data-x="300" data-y="-180" data-rotate="45">
         <h2>Why Free software</h2>
         <ul>
-          <li>community, no lock-in, possibility of professional support</li>
+          <li>community, no lock-in, possibility of professional support, other big projects out there</li>
           <li>Drupal is not the only free software we use: Linux, Apache, MySQL, Memcached, Varnish, Redis, ...</li>
           <li>What managers say:
              <br /><small>"Millions of developers are working for us for free!"</small>
@@ -124,7 +124,7 @@
     </ul></li>
       </ul>
 
-      <div class="step nested" data-exclude="1" data-y="360" data-x="300" data-rotate="25" data-scale="0.3">
+      <div id="scrum-graph" class="step nested" data-exclude="1" data-y="360" data-x="300" data-rotate="25" data-scale="0.3">
        <img src="images/scrum-big.png" />	
       </div>
     </div>
@@ -200,11 +200,23 @@
             56: ['select', '#step-11'],
             57: ['select', '#step-12'],
             48: ['select', '#step-13'],
+            36: ['select', '#scrum-graph'],
             222: ['select', '#step-15'],
           }
-        }
+        },
+        hash : { use: false },
+        mouse: { clickSelects: false }
       });
     });
+    //$(document).click(function(handler) {
+    //  if (handler.button === 0) {
+    //    $("#jmpress").jmpress('next');
+    //  }
+    //  if (handler.button === 1) {
+    //    $("#jmpress").jmpress('prev');
+    //  }
+      
+    //});
   </script>
   
 </body>
