@@ -1,0 +1,178 @@
+/** GENERAL **/
+body {
+  //font-family: 'Londrina Solid', cursive;
+  font-family: 'Averia Libre', cursive;
+	letter-spacing: 0.2em;
+	min-height: 740px;
+	background-color: white;
+	-webkit-font-smoothing: antialiased;
+background: transparent url('../images/drupal.png') scroll no-repeat center center;
+}
+
+h1 {
+  font-size: 2.5em;  
+}
+
+h2, h3 {
+  margin-top: 0;  
+}
+
+figure {
+  text-align: center; 
+}
+
+a {
+  color: black;
+}
+
+img.logo {
+  -webkit-transform: rotate(30deg);
+  -moz-transform:    rotate(30deg);
+  -ms-transform:     rotate(30deg);
+  -o-transform:      rotate(30deg);
+  transform:         rotate(30deg);
+  float: right;
+}
+
+.step:not(#container) .nested {
+  font-size: 1em;
+}
+
+/** STEP STYLES **/
+.step:not(#container) {
+	width: 900px;
+  height: auto;//400px;
+	font-size: 2em;
+	min-height: 500px;
+
+	display: block;
+  padding: 20px 30px;
+
+  color: #222;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	-ms-box-sizing:     border-box;
+	-o-box-sizing:      border-box;
+	box-sizing:         border-box;
+
+	-webkit-transition: opacity 1s;
+	-moz-transition:    opacity 1s;
+	-ms-transition:     opacity 1s;
+	-o-transition:      opacity 1s;
+	transition:         opacity 1s;
+	
+}
+
+/* fade out inactive slides */
+.step:not(.active):not(.nested-active) {
+	opacity: 0.5;
+}
+
+
+.step#start, .step.nested {
+  text-align: center;
+  background-color: transparent;
+  box-shadow:none;
+}
+
+.step, .step.nested.white {
+  background-color: white;
+  border-radius: 5%;
+  box-shadow: 20px 20px 40px #888;
+  position: relative;
+}
+
+.step#podrobnosti-uvedbe {
+  background: white url('../images/skype.png') scroll no-repeat center center;
+  border-radius: 5%;
+}
+
+.step#ocenjevanje img {
+  width: 20%;
+  float: right;
+  border-radius: 5%;
+  box-shadow: 10px 10px 25px #888;
+  -webkit-transform:rotate(30deg);
+}
+
+
+.step#ocenjevanje .nested img {
+  width: 100%;
+  float: none;
+  border-radius: 5%;
+  box-shadow: 10px 10px 25px #888;
+  -webkit-transform: none;
+}
+
+
+
+.step#ocenjevanje .nested.white {
+  text-align: left;
+  line-height: 1.5em;
+}
+
+
+
+.step#predstavitev img {
+  float: right;
+  border-radius: 7%;
+  box-shadow: 10px 10px 25px #888;
+  -webkit-transform:rotate(-45deg);
+}
+.step#potek-projekta img {
+	width: 35%;
+  float: right;
+  border-radius: 7%;
+  box-shadow: 10px 10px 25px #888;
+  -webkit-transform:rotate(30deg);
+  position: relative;
+  bottom: 30px;
+  left: 30px;
+}
+
+.step#potek-projekta .nested img {
+	width: 100%;
+  float: none;
+  border-radius: 7%;
+  box-shadow: 10px 10px 25px #888;
+  -webkit-transform: none;
+  position: static;
+}
+
+
+.step:not(#container) .step#drupal-example dd {
+  font-size: 0.7em;
+}
+
+.step:not(#container) .step#cache-general-idea {
+  text-align: center;
+}
+
+.step:not(#container) .step pre {
+  font-size: 0.8em;
+}
+
+.step .pros,
+.step .cons {
+  width: 45%;
+  height: 400px;
+  float: left;
+  font-size: 0.7em;
+  padding: 0.5em;
+}
+
+.step .pros {
+  background: rgba(202, 255, 195, 0.3) url(../images/plus.png) center center scroll no-repeat;
+  color: rgba(8, 142, 5, 1);
+}
+
+.step .cons {
+  background: rgba(255, 141, 165, 0.3) url(../images/minus.png) center center scroll no-repeat;
+  color: rgba(142, 5, 34, 1);
+}
+
+.step:not(#container) .step#configuration pre {
+  font-size: 0.6em;
+}

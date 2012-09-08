@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Slovenskenovice.si on Drupal</title>
+  <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+  
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href='http://fonts.googleapis.com/css?family=Londrina+Solid|Averia+Libre:400,700,400italic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/default.min.css">
+  <script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
+  <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+  <script type="text/javascript" src="js/jmpress.js/dist/jmpress.js"></script>
+  <script src="js/highcharts/js/highcharts.js"></script>
+  <script src="http://localhost:8899/socket.io/socket.io.js"></script>
+  <script src="http://localhost:8899/remote.js"></script>
+</head>
+<body>
+  
+  <div id="jmpress">
+    <div id="start" class="step" data-y="20">
+      <h1>Slovenske Novice Dot Si<div class="subtitle">(how did we do it and what did we learn)</div></h1>
+      
+      
+      <div>Janez Urevc</div><div>(@slashrsm)</div>
+      <div>(janez@|http://)janezurevc.name</div>
+    </div>
+    <div id="vsebina" class="step" data-scale="0.2" data-x="-400" data-y="100" data-rotate="68">
+      <h2>About me</h2>
+      <ul>
+	<li>developer, freelancer</li>
+	<li>currently working for biggest Slovenian daily newspaper</li>
+	<li>high traffic media websites (for our standards :))</li>
+	<li>from Portorož, Slovenia</li>
+	<li>2011 Google Summer of code student, 2012 mentor</li>
+      </ul>
+      <img src="images/map.png" class="map" />
+      <img src="images/soc.png" class="soc" />
+      <img src="images/delo_pivo.png" class="delo" />
+     </div>
+    <div class="step" data-scale="0.05" data-x="-310" data-y="120" data-rotate="-7">
+      <h2>Drupal core</h2>
+      <ul>
+	<li>basic features (content, categorization, themes, users & permissions, image handling, display management, ...)</li>
+	<li>is exactly what you get when you download and install Drupal</li>
+	<li>set ob basic features, modules and APIs</li>
+	<li>Highly <strong>pluggable</strong> and <strong>modular</strong>!</li>
+	<li>Latest version is Drupal 7</li>
+	<li>drupal.org - <small>home of core and lots of contrib modules</small></li>
+	<li>Drupal gardens <small>(drupalgardens.com) - not just core, but great to test without pain</small></li>
+      </ul>
+    </div>
+
+    <div class="step" data-scale="0.08" data-x="-250" data-y="145" data-rotate="6">
+      <h2>Drupal modules</h2>
+      <ul>
+			<li>extensions - <small>99,99% of sites will use at least some of them</small></li>
+			<li>11.000 modules available on drupal.org</li>
+			<li>drupal.org/modules</li>
+			<li>you can write your own!</li>
+			<li>Features like:
+			  <ul>
+          <li><small>content listings</small></li>
+          <li><small>advanced media hanlding</small></li>
+          <li><small>social networks integration</small></li>
+          <li><small>WYSIWYG editors</small></li>
+          <li><small>SEO <small>(semantic URLs, redirects, page titles, meta tags, ...)</small></small></li>
+          <li><small>webforms</small></li>
+          <li><small>many many more ...</small></li>
+			  </ul>
+			</li>
+	</ul>
+    </div>
+
+    <div id="predstavitev" class="step" data-scale="0.05" data-x="-190" data-y="120" data-rotate="-20">
+      <img src="images/drupal_slo.png" />
+    </div>
+
+    <div id="podrobnosti-uvedbe" class="step" data-scale="0.10" data-x="-105" data-y="125" data-rotate="20">
+      <h2>Some info about company</h2>
+      <ul>
+	<li>Delo, d.d. - the oldest and one of the biggest media companies in Slovenia</li>
+	<li>Established ~50y ago, very print-centric culture</li>
+	<li>2 daily newspapers, >10 other editions</li>
+	<li>realized in 2010 that need to go digital ;)</li>
+  <li>internal CMS was used before, development not sustainable</li>
+  <li>Free software, please HELP! :)</li>
+      </ul>
+      
+      <div class="step nested" data-scale="0.05" data-x="300" data-y="-180" data-rotate="45">
+        <h2>Why Free software</h2>
+        <ul>
+          <li>community, no lock-in, possibility of professional support</li>
+          <li>Drupal is not the only free software we use: Linux, Apache, MySQL, Memcached, Varnish, Redis, ...</li>
+          <li>What managers say:
+             <br /><small>"Millions of developers are working for us for free!"</small>
+          </li>
+          <li>What managers <strong>should</strong> say:
+             <br /><small>"We are cooperating with millions of developers on development of software X."</small>
+          </li>
+        </ul>
+      </div> 
+    </div>
+
+    <div  id="potek-projekta" class="step" data-scale="0.10" data-x="10" data-y="125" data-rotate="-10">
+      <h2>Some info about project</h2>
+      <ul>
+	<li>Development started in May 2011</li>
+	<li>We used Scrum methodology</li>
+  <li>Team: 3-4 developers + 2x Scrum Master + 1x Product owner</li>
+  <li>Drupal 7</li>
+  <li>Code-driven development
+    <ul>
+      <li>Features, update hooks</li>
+      <li>installation profiles</li>
+    </ul>
+  </li>
+  <li>Automatic nightly code reviews</li>
+  <li>Parallel project: "Delo's centralized user profile"
+    <ul>
+      <li>OpenID single sign on</li>
+      <li>attribute exchange</li>
+    </ul></li>
+      </ul>
+
+      <div class="step nested" data-exclude="1" data-y="360" data-x="300" data-rotate="25" data-scale="0.3">
+       <img src="images/scrum-big.png" />	
+      </div>
+    </div>
+
+    <div id="ocenjevanje" class="step" data-scale="0.10" data-x="115" data-y="135" data-rotate="15">
+      <h2>Main modules used</h2>
+      <ul>
+  <li>Views</li>
+  <li>Panels</li>
+  <li>Media + File entity</li>
+  <li>Search API: Solr integration</li>
+  <li>Features</li>
+  <li>Migrate</li>
+  <li>Varnish integration</li>
+  <li>Radioactivity</li>
+  <li>Memcached, APC cache</li>
+  <li>many, many more <small>(big focus on improvements of editorial workflow)</small></li>
+      </ul>
+    </div>
+
+    <div class="step" data-scale="0.08" data-x="205" data-y="135" data-rotate="-15">
+      <h2>Performance</h2>
+      <ul>
+	<li>Current traffic: 250.000 unique users (IP), 13M hits</li>
+	<li>Growth: 10-15% monthly</li>
+  <li>
+   Varnish
+    <ul>
+      <li>"issues" /w cookies - needed some custom configuration</li>
+      <li>user's IP number</li>
+    </ul>
+  </li>
+  <li>
+   Cache
+    <ul>
+      <li>Panels cache</li>
+      <li>Views cache</li>
+      <li>Backend: Memcached</li>
+      <li>syncronization issues</li>
+      <li>"semi smart" cache handling</li>
+    </ul>
+  </li>
+  <li>lazy loading of ads</li>
+      </ul>
+    </div>
+
+    <div id="graph-apache" class="step" data-scale="0.08" data-x="290" data-y="135" data-rotate="25">
+      <img src="images/graphs_apache.png" />      
+   </div>
+
+    <div id="graph-varnish" class="step" data-scale="0.08" data-x="370" data-y="155" data-rotate="-35">
+      <img src="images/graphs_varnish.png" /> 
+    </div>
+
+    <div id="graph-growth" class="step" data-scale="0.2" data-x="450" data-y="25" data-rotate="-75">
+      <img src="images/graphs_growth.png" /> 
+    </div>
+
+  </div>
+  <script type="text/javascript">
+    $(function() {
+      $("#jmpress").jmpress({
+        keyboard: {
+          keys: {
+            27: ['select', '#start'],
+            49: ['select', '#vsebina'],
+            50: ['select', '#step-3'],
+            51: ['select', '#step-4'],
+            52: ['select', '#predstavitev'],
+            53: ['select', '#podrobnosti-uvedbe'],
+            54: ['select', '#potek-projekta'],
+            55: ['select', '#ocenjevanje'],
+            56: ['select', '#step-11'],
+            57: ['select', '#step-12'],
+            48: ['select', '#step-13'],
+            222: ['select', '#step-15'],
+          }
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>
